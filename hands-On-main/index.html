@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Sistema de Controle Acadêmico</title>
+
+  <link rel='shortlink' href='https://www.unipe.edu.br/?p=834' />
+  <link rel="icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" sizes="32x32" />
+  <link rel="icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/all.css" />
+</head>
+
+<body>
+  <header class="header">
+    <!-- BEM
+       Block - element - modify -->
+    <img src="./assets/cse-marcas-unipe_50anos_va1.svg" alt="Sistema de Controle Acadêmico" class="header__logo" />
+    <nav class="nav-header">
+      <a href="#" title="Página principal" class="nav-header__link">Principal</a>
+      <a href="html/alunos.html" title="Alunos" class="nav-header__link">Alunos</a>
+      <a href="html/disciplinas.html" title="Disciplina" class="nav-header__link">Disciplina</a>
+      <a href="html/cursos.html" title="Cursos" class="nav-header__link">Cursos</a>
+      <a href="#" title="Sair" class="button button--danger">Sair</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section-wrapper">
+      <header class="section-header">
+        <h1 class="section-header__title">Alunos</h1>
+        <button class="button button--success" onclick="createStudent()">Novo Aluno</button>
+      </header>
+      <div class="table-container">
+        <table class="table table--stripe" id="student-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Matrícula</th>
+              <th>Cursos</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td>Patrícia Marcela Sara Novaesww</td>
+              <td>0031</td>
+              <td>Sistemas para internet</td>
+              <td align="center">
+                <button class="button button--danger" onclick="deleteStudentTable(3)">Apagar</button>
+                <button class="button button--success" onclick="editdStudentModal(3)">Editar</button>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+      <dialog class="modal" id="student-modal">
+        <div class="modal__container">
+          <header class="modal__header">
+            <h3 id="student-modal-title">Novo aluno</h3>
+          </header>
+          <form id="student-form" class="modal__form">
+            <fieldset>
+              <label for="nome">Nome<span class="required-indicator">*</span></label>
+              <input type="text" placeholder="Nome do aluno..." name="nome" id="nome" required>
+              <label for="matricula">Matrícula<span class="required-indicator">*</span></label>
+              <input type="text" placeholder="Matrícula" id="matricula" name="matricula" required>
+              <label for="curso">Curso<span class="required-indicator">*</span></label>
+              <select name="curso" id="curso" required>
+                <!-- <option value="">selecione</option>
+                <option value="Sistemas para internet">Sistemas para internet</option>
+                <option value="Redes">Redes</option> --> 
+              </select>
+            </fieldset>
+            <div class="modal__form-buttons">
+              <button class="button button--danger" type="reset" onclick="closeStudentModal()">
+                Cancelar
+              </button>
+              <button class="button button--success" type="submit" id="save-student">Criar</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </section>
+    <section class="section-wrapper">
+      <header class="section-header">
+        <h1 class="section-header__title">Disciplina</h1>
+        <button class="button button--success" onclick="createDisciplina()">Nova Disciplina</button>
+      </header>
+      <div class="subject-list">
+        <!-- <div class="subject-card">
+          <h3 class="subject-card__title">Nome da disciplina</h3>
+          <hr />
+          <ul class="subject-card__list">
+            <li>carga horária: 16h</li>
+            <li>Professor: Pessoa da Silva</li>
+            <li>Status <span class="tag tag--danger">Obrigatória</span></li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div> -->
+      </div>
+
+      <dialog class="modal" id="disciplina-modal">
+        <div class="modal__container">
+          <header class="modal__header">
+            <h3 id="disciplina-modal-title"></h3>
+          </header>
+          <form id="disciplina-form" class="modal__form">
+            <fieldset>
+
+              <label for="nomeDisciplina">Nome<span class="required-indicator">*</span></label>
+              <input type="text" placeholder="Nome da disciplina" name="nomeDisciplina" id="nomeDisciplina" required>
+             
+              <label for="cargaHoraria">Carga Horária<span class="required-indicator">*</span></label>
+              <input type="text" placeholder="Carga Horária" id="cargaHoraria" name="cargaHoraria" required>
+
+              <label for="professor">Professor<span class="required-indicator">*</span></label>
+              <input type="text" placeholder="Professor" id="professor" name="professor" required>
+
+              <label for="observacoes">Descrição<span class="required-indicator">*</span></label>
+              <input type="text" placeholder="Descrição" name="observacoes" id="observacoes" required>
+
+              <label for="status">Status<span class="required-indicator">*</span></label>
+              <select name="status" id="status" required>
+                <option value="">Selecione</option>
+                <option value="Obrigatória">Obrigatória</option>
+                <option value="Opcional">Opcional</option>
+              </select>  
+              
+              <label for="cursoDisciplina">Curso<span class="required-indicator">*</span></label>
+              <select name="cursoDisciplina" id="cursoDisciplina" required multiple>
+              </select>
+              <small>Segure a tecla Ctrl para selecionar várias opções.</small>
+              
+            </fieldset>
+            <div class="modal__form-buttons">
+              <button class="button button--danger" type="reset" onclick="closeDisciplinaModal()"> Cancelar</button>
+              <button class="button button--success" type="submit" id="save-disciplina">Criar</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+      
+    </section>
+  </main>
+  <footer class="footer">
+    <span>Detalhes principais das disciplinas e dos alunos.</span>
+  </footer>
+  <script src="./javaScript/scripts.js"></script>
+  <script src="./javaScript/scriptsDisciplinas.js"></script>
+</body>
+
+</html>

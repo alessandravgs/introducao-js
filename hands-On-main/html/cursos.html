@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Sistema de Controle Acadêmico</title>
+  
+  <meta charset="UTF-8">
+  <link rel='shortlink' href='https://www.unipe.edu.br/?p=834' />
+  <link rel="icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" sizes="32x32" />
+  <link rel="icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/reset.css" />
+  <link rel="stylesheet" href="../styles/all.css" />
+</head>
+
+<body>
+  <header class="header">
+    <!-- BEM
+       Block - element - modify -->
+    <img src="../assets/cse-marcas-unipe_50anos_va1.svg" alt="Sistema de Controle Acadêmico" class="header__logo" />
+    <nav class="nav-header">
+      <a href="../index.html" title="Página principal" class="nav-header__link">Principal</a>
+      <a href="alunos.html" title="Alunos" class="nav-header__link">Alunos</a>
+      <a href="disciplinas.html" title="Disciplina" class="nav-header__link">Disciplina</a>
+      <a href="#" title="Cursos" class="nav-header__link">Cursos</a>
+      <a href="#" title="Sair" class="button button--danger">Sair</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section-wrapper">
+      <header class="section-header">
+        <h1 class="section-header__title">Cursos</h1>
+        <button class="button button--success" onclick="createCurso()">Novo Curso</button>
+      </header>
+      <div class="curso-list">
+      </div>
+
+      <dialog class="modal" id="curso-modal">
+        <div class="modal__container">
+          <header class="modal__header">
+            <h3 id="curso-modal-title"></h3>
+          </header>
+          <form id="curso-form" class="modal__form">
+            <fieldset>
+
+              <label for="nomeCurso">Nome<span class="required-indicator">*</span></label>
+              <input type="text" placeholder="Nome do Curso" name="nomeCurso" id="nomeCurso" required>
+             
+            </fieldset>
+            <div class="modal__form-buttons">
+              <button class="button button--danger" type="reset" onclick="closeCursoModal()"> Cancelar</button>
+              <button class="button button--success" type="submit" id="save-curso">Criar</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+      
+    </section>
+  </main>
+  <footer class="footer">
+    <span>Página para os dados dos Cursos.</span>
+  </footer>
+  <script src="../javaScript/scriptsCursos.js"></script>
+</body>
+
+</html>

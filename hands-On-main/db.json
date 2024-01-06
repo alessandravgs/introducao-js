@@ -1,0 +1,159 @@
+{
+  "alunos": [
+    {
+      "nome": "Nélio Frazão Chaves Silva",
+      "matricula": "0031",
+      "curso": "Sistemas para internet",
+      "id": 3
+    },
+    {
+      "nome": "Maria Leite Macedo",
+      "matricula": "0052",
+      "curso": "Redes",
+      "id": 4
+    },
+    {
+      "nome": "Guilherme Lima Pereira",
+      "matricula": "0058",
+      "curso": "Sistemas para internet",
+      "id": 5
+    },
+    {
+      "nome": "Juliana Cunha Costa",
+      "matricula": "0067",
+      "curso": "Redes",
+      "id": 6
+    },
+    {
+      "nome": "Tatiana Lisboa França",
+      "matricula": "0039",
+      "curso": "Sistemas para internet",
+      "id": 7
+    },
+    {
+      "nome": "Igor Paulo Severo",
+      "matricula": "0088",
+      "curso": "Redes",
+      "id": 8
+    },
+    {
+      "nome": "Bruna Chaves Matos",
+      "matricula": "7852",
+      "curso": "Engenharia Civil",
+      "id": 9
+    },
+    {
+      "nome": "Paulo Câmara Correa",
+      "matricula": "4522",
+      "curso": "Engenharia Civil",
+      "id": 10
+    }
+  ],
+  "disciplinas": [
+    {
+      "nomeDisciplina": "Introdução a programação com scripts",
+      "cargaHoraria": "36h",
+      "professor": "Tiago Daniel Fernando Baptista",
+      "observacoes": "O script é uma série de instruções para que o PC execute determinadas tarefas segundo programado.",
+      "status": "Obrigatória",
+      "id": 1,
+      "cursoDisciplina": [
+        "Redes",
+        "Sistemas para internet"
+      ]
+    },
+    {
+      "nomeDisciplina": "Linguagens de Marcação",
+      "cargaHoraria": "67h",
+      "professor": "Marcela Vera Mendes",
+      "observacoes": "É representada por um conjunto de códigos empregados a dados e a textos, com a finalidade de adicionar informações específicas sobre esse dado ou texto.",
+      "status": "Obrigatória",
+      "cursoDisciplina": "Redes",
+      "id": 2
+    },
+    {
+      "nomeDisciplina": "Fundamentos da Computação",
+      "cargaHoraria": "36h",
+      "professor": "Fernando Almeida Lacerda",
+      "observacoes": "São formados quanto à origem e desenvolvimento da informática, incluída aí todo o desenrolar do surgimento e disseminação da internet e suas diversas aplicações.",
+      "status": "Obrigatória",
+      "cursoDisciplina": "Redes",
+      "id": 3
+    },
+    {
+      "nomeDisciplina": "Estrutura de dados",
+      "cargaHoraria": "30h",
+      "professor": "Maria França Barreto",
+      "observacoes": "Estrutura de dados é o ramo da computação que estuda os diversos mecanismos de organização de dados para atender aos diferentes requisitos de processamento.",
+      "status": "Obrigatória",
+      "cursoDisciplina": "Redes",
+      "id": 4
+    },
+    {
+      "nomeDisciplina": "Sistemas Operacionais",
+      "cargaHoraria": "40h",
+      "professor": "Maitê Carolina Aragão",
+      "observacoes": "O sistema operacional gerencia todos os recursos do computador, ou seja, tanto os programas (software) quanto as partes que o compõe (hardware).",
+      "status": "Opcional",
+      "cursoDisciplina": "Redes",
+      "id": 5
+    },
+    {
+      "nomeDisciplina": "Fundamentos de matemática",
+      "cargaHoraria": "40h",
+      "professor": "Paula Lacerda Mendonça",
+      "observacoes": "É uma expressão cujo significado consiste no estudo de conceitos básicos da matemática",
+      "status": "Opcional",
+      "cursoDisciplina": "Redes",
+      "id": 6
+    },
+    {
+      "nomeDisciplina": "Fundamentos de matemática",
+      "cargaHoraria": "36h",
+      "professor": "Paula Lacerda Mendonça",
+      "observacoes": "Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico.",
+      "status": "Obrigatória",
+      "cursoDisciplina": [
+        "Redes",
+        "Sistemas para internet"
+      ],
+      "id": 7
+    },
+    {
+      "nomeDisciplina": "Calculo 3",
+      "cargaHoraria": "40h",
+      "professor": "José Feliciano Medeiros",
+      "observacoes": "O sistema operacional gerencia todos os recursos do computador, ou seja, tanto os programas (software) quanto as partes que o compõe (hardware).",
+      "status": "Obrigatória",
+      "cursoDisciplina": "Engenharia Civil",
+      "id": 9
+    },
+    {
+      "nomeDisciplina": "Vigas e Ligamentos",
+      "cargaHoraria": "40h",
+      "professor": "José Feliciano Medeiros",
+      "observacoes": "Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico.",
+      "status": "Opcional",
+      "cursoDisciplina": "Engenharia Civil",
+      "id": 10
+    }
+  ],
+  "cursos": [
+    {
+      "nomeCurso": "Redes",
+      "id": 2
+    },
+    {
+      "nomeCurso": "Sistemas para internet",
+      "id": 3
+    },
+    {
+      "nomeCurso": "Engenharia Civil",
+      "id": 4
+    },
+    {
+      "nomeCurso": "Ciência da computação",
+      "id": 5
+    }
+  ]
+}

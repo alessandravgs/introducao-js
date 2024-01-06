@@ -1,0 +1,70 @@
+.curso-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.curso-card {
+  min-height: 250px;
+  width: 100%;
+  background-color: var(--branco);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px)  { 
+  .curso-list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .curso-card {
+    margin-right: 5px;
+    width: calc(33.33% - 10px); /
+  } 
+}
+
+@media screen and (min-width: 992px) and (max-width: 1100px)  { 
+  .curso-card {
+    width: calc(50% - 20px); 
+    margin: 0 10px 20px 10px;
+  }
+}
+
+@media screen and (min-width: 1101px)  { 
+  .curso-card {
+    width: 100%;
+    margin: 0 10px 20px 10px;
+  }
+}
+
+.curso-card__title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.curso-card__list {
+  padding-bottom: 10px;
+}
+
+.curso-card__list li {
+  line-height: 2;
+}
+
+.curso-card p {
+  color: var(--cinza);
+}
+
+small {
+    margin-top: 1px; 
+    font-size: 12px;
+    color: red;
+}
+
+h4{
+  color: var(--cinza);
+  font-weight: bold;
+  font-size: 1.2em;
+}
